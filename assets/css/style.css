@@ -1,0 +1,12 @@
+.cover {
+    margin-bottom: 5rem !important;
+    height: 30rem;
+    box-shadow: 5px 5px 25px;
+    border: 2px solid #164e8d;
+}
+.cover img {
+    border-radius: 10px;
+}
+.title {
+    text-shadow: 1px 1px 2px #164e8d;
+}
