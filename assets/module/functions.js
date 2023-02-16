@@ -1,3 +1,6 @@
+
+///// Filtrados ///////////
+
 export function filtradoDeFarmacia( objetos,  paginas) {
     let productos = [];
     for (let objeto of objetos) {
@@ -20,16 +23,18 @@ export function filtradoDeFarmacia( objetos,  paginas) {
    
   }
 
-  export function addCard(events, cards) {
+////// Productos  ////////////////////
+
+  export function agregarProductos(events, cards) {
     let boxCards = "";
     for (let event of events) {
-      boxCards += allCards(event);
+      boxCards += productos(event);
     }
     cards.innerHTML = boxCards;
   }
 
 
-  export function allCards(objeto) {
+  export function productos(objeto) {
     return `<div class="card p-2 cover"  style="width: 20rem;">
     <img src=${objeto.imagen} alt="${objeto.producto}" class="card-img-top" style="height: 15rem;">
     <div class="card-body ">
@@ -41,4 +46,29 @@ export function filtradoDeFarmacia( objetos,  paginas) {
       </div>
     </div>
     </div>`
+  }
+
+
+////// Busqueda ///////////
+
+  export function busquedaDeProductos(lista, busqueda) {
+    let buscador = lista.filter(objeto => objeto.producto.toLowerCase().includes(busqueda));
+    
+    return buscador;
+    
+  }
+
+////// Mensaje de Error ///////////////////
+
+  export function mensajeDeError() {
+    return `<div class="error m-auto"> <p class="text-center fs-3"> No encontramos su Producto! </p> 
+      <img src="/assets/imgs/perritotriste.jpg" alt="error"> </div>`;
+  }
+  
+  export function mostrarError(producto, error) {
+    if (producto.length === 0) {
+      error.innerHTML = mensajeDeError();
+    } else {
+      return agregarProductos(producto, error);
+    }
   }
