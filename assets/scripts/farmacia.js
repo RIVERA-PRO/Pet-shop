@@ -8,7 +8,7 @@ const carrito = document.getElementById("btn-car")
 const modalCarrito = document.getElementById("modal-content")
 const btnHeart = document.getElementsByClassName("btn-heart")
 
-let products = JSON.parse(localStorage.getItem("products")) || [] // trae del local storage los productos que fueron agregados al carrito
+let products = JSON.parse(localStorage.getItem("products")) || [] 
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || []
 
 localStorage.setItem("products", JSON.stringify(products))
@@ -16,7 +16,7 @@ localStorage.setItem("products", JSON.stringify(products))
 let precioTotal = 0
 createShopping(products, shopping)
 
-let toys = JSON.parse(localStorage.getItem("toys")) || [] // toma el value de la key "toys" en el localStorage y lo guarda en la variable toys
+let toys = JSON.parse(localStorage.getItem("toys")) || [] 
 let pharmacyProducts = JSON.parse(localStorage.getItem("pharmacyProducts")) || []
 let cartProducts = toys.concat(pharmacyProducts)
 
@@ -39,14 +39,14 @@ container.addEventListener("click", (e) => {
                     pressPharmacyProduct.disponibles--
 
                     pharmacyProducts[i] = pressPharmacyProduct
-                    localStorage.setItem("pharmacyProducts", JSON.stringify(pharmacyProducts)) // se actualiza la propiedad del localStorage, para que cuando recargues la pag no se vuelva a la info antigua
+                    localStorage.setItem("pharmacyProducts", JSON.stringify(pharmacyProducts)) 
                     let unidades = document.getElementById(`unidades-${pressPharmacyProduct._id}`)
-                    unidades.textContent = `${pressPharmacyProduct.disponibles} unidades` // toma el id de <p> y le cambia el textContent
+                    unidades.textContent = `${pressPharmacyProduct.disponibles} unidades` 
                 }
             }
 
             products.push(pressPharmacyProduct)
-            localStorage.setItem("products", JSON.stringify(products)) // actualiza el valor de la key "products" en el localStorage
+            localStorage.setItem("products", JSON.stringify(products)) 
         } else {
             Swal.fire({
                 icon: 'error',
@@ -55,11 +55,11 @@ container.addEventListener("click", (e) => {
             })
         }
     }
-    else if (e.target.offsetParent && e.target.offsetParent.className == "card producto") { //si existe un parent y ese parent tiene className card y producto
-        let modal = e.target.offsetParent.nextElementSibling // el elemento que le sigue al parent, en este caso el modal
+    else if (e.target.offsetParent && e.target.offsetParent.className == "card producto") { 
+        let modal = e.target.offsetParent.nextElementSibling 
         modal.addEventListener("click", (e) => {
             if (e.target.className.includes("modal-container")) {
-                createCards(pharmacyProducts, container, "") //cuando se clickee afuera del modal se actualizan las cards
+                createCards(pharmacyProducts, container, "") 
 
                 fillHeart(pharmacyProducts, favoritos, btnHeart)
 
@@ -82,7 +82,7 @@ container.addEventListener("click", (e) => {
 carrito.addEventListener("click", (e) => {
     precioTotal = 0
     products.forEach(product => precioTotal += product.precio)
-    createShopping(products, shopping, precioTotal) // actualiza el modal del carrito
+    createShopping(products, shopping, precioTotal) 
 
     modalCarrito.addEventListener("click", (e) => {
         if (e.target.className.includes("garbage")) {
@@ -135,10 +135,10 @@ carrito.addEventListener("click", (e) => {
         }
     })
 
-    let modal = document.getElementById("staticBackdrop") // el elemento que le sigue al parent, en este caso el modal
+    let modal = document.getElementById("staticBackdrop") 
     modal.addEventListener("click", (e) => {
         if (e.target.className.includes("modal-container")) {
-            createCards(pharmacyProducts, container, "") //cuando se clickee afuera del modal se actualizan las cards
+            createCards(pharmacyProducts, container, "") 
             fillHeart(pharmacyProducts, favoritos, btnHeart)
         }
 
@@ -159,9 +159,3 @@ let array2 = ["dog.jpg", "pexels-adam-kontor-333083.jpg", "pexels-kat-smith-5516
 createCarru(array2, slide)
 
 
-
-// PARA BORRAR ITEMS DEL CARRITO
-// if( products.some( product => product._id == e.target.id) ){
-//     products = products.filter( (product) => product._id != e.target.id)
-//     localStorage.setItem("products", JSON.stringify(products))
-// }
