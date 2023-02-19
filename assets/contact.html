@@ -1,33 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    /><link rel="stylesheet" href="./assets/css/style.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jugueteria</title>
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="shortcut icon" href="../assets/img/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
+
 <body>
-    <header>
+  <header id="header" class="header">
+    <a href="#" class="logo">
+      <img src="../assets/img/logo.png" alt="logo">
+    </a>
 
-    </header>
-    <main>
+    <ul class="navbar m-0">
+      <li><a href="../index.html" class="navar">Inicio</a></li>
+      <li><a href="./jugueteria.html" class="navar">Jugueteria</a></li>
+      <li><a href="./farmacia.html" class="navar">Farmacia</a></li>
+      <li><a href="#" class="navar">Contacto</a></li>
 
-    </main>
-    <footer>
+    </ul>
 
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+    </div>
+    </div>
+    <div class="redes-sociales-h">
+      <a href="https://www.instagram.com/" target="_blank"><i class='fa fa-instagram'></i></a>
+      <a href="https://www.linkedin.com/" target="_blank"> <i class='fa fa-linkedin'></i></a>
+      <a href="https://api.whatsapp.com/qr/AHQDYWM7EKATH1?autoload=1&app_absent=0" target="_blank"> <i
+          class='fa fa-whatsapp'></i></a>
+    </div>
+
+    <div class="header-icons">
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+
+  </header>
+  <main>
+    <section class="home-contact" id="home">
+
+      <div class="home-text">
+        <h6>¡Nada mejor que toda una vida juntos!</h6>
+        <h1>Contacto</h1>
+        <p>¡Cuidá a tu mejor amigo!</p>
+
+      </div>
+
+
+    </section>
+
+    <section class="title">
+      <h2>Ponte en contaco con nosotros.</h2>
+      <p>Envianos tu datos y tu consulta.!</p>
+      <section class="mapa-form">
+        <div class="mapa"> <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.7790861530393!2d-65.48390958578295!3d-24.73446341183783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bea7a1e273b9b%3A0x6ca426a2ddd44019!2sParaguay%202334%2C%20San%20Lorenzo%2C%20Salta!5e0!3m2!1ses-419!2sar!4v1676555148210!5m2!1ses-419!2sar"
+            style="border: 0" allowfullscreen=""></iframe></div>
+        </div>
+        <div class="forms">
+          <form id="enviar">
+            <div class="labe">
+              <label for="in01" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="in01" required>
+            </div>
+            <div class="labe">
+              <label for="in02" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="in02" required>
+            </div>
+            <div class="labe">
+              <label for="in03" class="form-label">Telefono</label>
+              <input type="number" class="form-control" id="in03" required>
+            </div>
+
+
+            <div class="labe">
+              <label for="in04" class="form-label">Email</label>
+              <input type="email" class="form-control" id="in04" required>
+            </div>
+            <div class="labe">
+              <label for="mascota">Mascota</label>
+              <select name="Mascota" id="in05">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="conejo">Conejo</option>
+                <option value="loro">Loro</option>
+              </select>
+
+
+            </div>
+            <div class="labe">
+              <label for="in06" class="form-label">Comentario</label>
+              <textarea class="form-control" id="in06" rows="3"></textarea>
+            </div>
+
+            <div>
+              <button class="btn " id="enviar" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <div class="redes-sociales">
+      <a href="#"><i class='fa fa-instagram'></i></a>
+      <a href="#"> <i class='fa fa-linkedin'></i></a>
+      <a href="#"> <i class='fa fa-whatsapp'></i></a>
+    </div>
+
+  </main>
+
+  <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn-car" id="btn-car"><img
+      src="../assets/img/carritoo.png" class="car" alt="car"></button>
+  <div class="modal fade modal-container" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content w-100 mx-auto" id="modal-content">
+        <div class="modal-body d-flex flex-column justify-content-center align-items-center gap-3" id="modal-body">
+          <div id="cart">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+
+    <section class="enlaces">
+      <div class="enl">
+        <h5>Nosotros</h5>
+        <a href="#">Sobre Puppis</a>
+        <a href="#">Blog</a>
+        <a href="#">Sucursales</a>
+        <a href="#">Programación y Desarrollo</a>
+        <a href="#">Revista del mes</a>
+        <a href="#">Desarrollo Institucional</a>
+        <a href="#">Proveedores</a>
+      </div>
+
+      <div class="enl">
+        <h5>Tienda Online</h5>
+        <a href="#">Envío Programado</a>
+        <a href="#">Formas de Entrega</a>
+        <a href="#">Descuentos Bancarios</a>
+        <a href="#">Cambios y devoluciones</a>
+        <a href="#">Legales</a>
+        <a href="#">Botón de arrepentimiento</a>
+        <a href="#">Business</a>
+      </div>
+
+      <div class="enl">
+        <h5>Equipo</h5>
+        <a href="https://github.com/RIVERA-PRO">Juan Rivera</a>
+        <a href="https://github.com/LucasmSantoss">Lucas Santos</a>
+        <a href="https://github.com/Alexis196">Alexis Franco</a>
+        <a href="https://github.com/xkarimx">Karen Perez</a>
+        <a href="#">MindHub</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+
+      <div class="enl">
+        <img src="../assets/img/logo.png" alt="logo" class="logo-footer">
+        <form>
+          <div class="input-color"> <input type="email" name="" placeholder="ingresa tu email"></div>
+          <div class="input-buton">
+            <a href="mailto:puppis@gmail.com"><input type="submit"></a>
+          </div>
+        </form>
+        <img src="../assets/img/pagos.png" alt="pagos" class="pagos">
+      </div>
+
+    </section>
+
+    <div class="copyright">
+      <p>Copyright - Puppis 2023</p>
+    </div>
+
+  </footer>
+  <script src="./scripts/form.js"></script>
+  <script src="../assets/scripts/header.js"> </script>
+  <script src="../assets/scripts/contact.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
