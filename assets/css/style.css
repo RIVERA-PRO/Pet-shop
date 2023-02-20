@@ -748,7 +748,17 @@ iframe{
     height: 100%;
 }
 
+.verde {
+    background-color: green;
+}
 
+.rojo {
+    background-color: red;
+	width: 200px;
+	border-radius: 10px;
+	height: 40px;
+	padding: 0;
+}
 
 form{
     display: flex;

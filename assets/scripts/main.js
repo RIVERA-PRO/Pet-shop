@@ -4,11 +4,11 @@ const carrito = document.getElementById("btn-car")
 const shopping = document.getElementById("cart")
 const modalCarrito = document.getElementById("modal-content")
 
-let products = JSON.parse(localStorage.getItem("products")) || [] // trae del local storage los productos que fueron agregados al carrito
+let products = JSON.parse(localStorage.getItem("products")) || [] 
 let precioTotal = 0
 createShopping(products,shopping,false)
 
-let toys = JSON.parse(localStorage.getItem("toys")) || [] // toma el value de la key "toys" en el localStorage y lo guarda en la variable toys
+let toys = JSON.parse(localStorage.getItem("toys")) || [] 
 let pharmacyProducts = JSON.parse(localStorage.getItem("pharmacyProducts")) || []
 let cartProducts = toys.concat(pharmacyProducts)
 
@@ -27,7 +27,7 @@ data.then((response) => {
 carrito.addEventListener("click", (e) => {
     precioTotal = 0
     products.forEach(product => precioTotal += product.precio)
-    createShopping(products,shopping,precioTotal,false) // actualiza el modal del carrito
+    createShopping(products,shopping,precioTotal,false) 
 
     modalCarrito.addEventListener("click", (e) => {
         if (e.target.className.includes("garbage")) {

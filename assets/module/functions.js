@@ -1,5 +1,4 @@
 
-
 export async function getData() {
   try {
     const response = await fetch("https://mindhub-xj03.onrender.com/api/petshop")
@@ -25,7 +24,7 @@ export function createCards(list, container, formulario) {
 }
 
 function writeCard(element) {
-  let color = element.disponibles < 5 ? "red" : "green";
+  let colorDisponibles = element.disponibles < 5 ? "rojo" : "verde";
   return `
       <div class="card producto" id="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#${element._id}">
       <div class="car p-2 cover" >
@@ -35,7 +34,7 @@ function writeCard(element) {
       <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="black" id="${element.producto}" d="M12.39 20.87a.696.696 0 0 1-.78 0C9.764 19.637 2 14.15 2 8.973c0-6.68 7.85-7.75 10-3.25 2.15-4.5 10-3.43 10 3.25 0 5.178-7.764 10.664-9.61 11.895z" fill="#000000"/></svg>
       </button>
         <h5 class="card-title h-50 title">${element.producto}</h5>
-        <p class="m=0 ">Disponibles: ${element.disponibles}</p>
+        <p class="m=0 ${colorDisponibles}">Disponibles: ${element.disponibles}</p>
         <div class="d-flex justify-content-evenly align-items-center">         
           <p class="m-0">$${element.precio}</p>
           <a  class="btn btn-outline-primary align-self-end" id="data-id"  > <img class="icon-btn" id="carrito-img" src="../assets/img/carritoo.png" alt="mano-patita"></a>
@@ -55,6 +54,7 @@ function writeCard(element) {
                 <div class="card-bod">
                   <div class="cont-stock d-flex flex-column">
                     <p class="card-text"><b>Precio: $${element.precio}</b></p>
+                    <p class=" ${colorDisponibles} text-center stock"><b>Disponible</b></p>
                     <h5 >${element.producto}</h5>
                   </div>
                   <div class="cont-unidad d-flex justify-content-end align-items-end">

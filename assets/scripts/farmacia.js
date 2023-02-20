@@ -50,8 +50,8 @@ container.addEventListener("click", (e) => {
         } else {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
-                text: 'Ya no hay stock disponible',
+                title: '',
+                text: 'Lo siento nos quedamos sin disponibles',
             })
         }
     }
