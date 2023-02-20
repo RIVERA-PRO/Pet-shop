@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
 
-
-
-
-
-
-=======
->>>>>>> dcdaa6f2453c113c2c848cbd8cbb889b4af51ad7
 let enviar = document.getElementById("enviar");
 let dato = document.getElementById('in01')
 let dato2 = document.getElementById('in02')

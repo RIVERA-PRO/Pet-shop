@@ -1,83 +1,4 @@
 
-<<<<<<< HEAD
-=======
-// ///// Filtrados ///////////
-
-// export function filtradoDeFarmacia(objetos, paginas) {
-//     let productos = [];
-//     for (let objeto of objetos) {
-//         if (objeto.categoria === "farmacia") {
-//             productos.push(objeto);
-//         }
-//     }
-//     return productos;
-// }
-
-// export function filtradoDeJugueteria(objetos, pagina) {
-//     let productos = [];
-//     for (let objeto of objetos) {
-//         if (objeto.categoria === "jugueteria") {
-//             productos.push(objeto);
-//         }
-
-//     }
-//     return productos;
-
-// }
-
-// ////// Productos  ////////////////////
-
-// export function agregarProductos(events, cards) {
-//     let boxCards = "";
-//     for (let event of events) {
-//         boxCards += productos(event);
-//     }
-//     cards.innerHTML = boxCards;
-// }
-
-
-// export function productos(objeto) {
-//     return `<div class="card p-2 cover" >
-//     <img src=${objeto.imagen} alt="${objeto.producto}" class="card-img-top">
-//     <div class="card-body ">
-//       <h5 class="card-title h-50 title">${objeto.producto}</h5>
-//       <p class="m=0">Disponibles: ${objeto.disponibles}</p>
-//       <div class="d-flex justify-content-evenly align-items-center">         
-//         <p class="m-0">$${objeto.precio}</p>
-//         <a " class="btn btn-outline-primary align-self-end" id="data-id" >Agregar al carrito</a>
-//       </div>
-//     </div>
-//     </div>`
-// }
-
-
-// ////// Busqueda ///////////
-
-// export function busquedaDeProductos(lista, busqueda) {
-//     let buscador = lista.filter(objeto => objeto.producto.toLowerCase().includes(busqueda));
-
-//     return buscador;
-
-// }
-
-// ////// Mensaje de Error ///////////////////
-
-// export function mensajeDeError() {
-//     return `<div class="error m-auto"> <p class="text-center fs-3"> No encontramos su Producto! </p> 
-//       <img src="../assets/img/perritotriste.jpg" alt="error"> </div>`;
-// }
-
-// export function mostrarError(producto, error) {
-//     if (producto.length === 0) {
-//         error.innerHTML = mensajeDeError();
-//     } else {
-//         return agregarProductos(producto, error);
-//     }
-// }
-
-
-// //// Carrito /////////
->>>>>>> dcdaa6f2453c113c2c848cbd8cbb889b4af51ad7
 
 export async function getData() {
   try {
@@ -114,11 +35,7 @@ function writeCard(element) {
       <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="black" id="${element.producto}" d="M12.39 20.87a.696.696 0 0 1-.78 0C9.764 19.637 2 14.15 2 8.973c0-6.68 7.85-7.75 10-3.25 2.15-4.5 10-3.43 10 3.25 0 5.178-7.764 10.664-9.61 11.895z" fill="#000000"/></svg>
       </button>
         <h5 class="card-title h-50 title">${element.producto}</h5>
-<<<<<<< HEAD
-        <p class="m=0gi">Disponibles: ${element.disponibles}</p>
-=======
-        <p class="m=0">Disponibles: ${element.disponibles}</p>
->>>>>>> dcdaa6f2453c113c2c848cbd8cbb889b4af51ad7
+        <p class="m=0 ">Disponibles: ${element.disponibles}</p>
         <div class="d-flex justify-content-evenly align-items-center">         
           <p class="m-0">$${element.precio}</p>
           <a  class="btn btn-outline-primary align-self-end" id="data-id"  > <img class="icon-btn" id="carrito-img" src="../assets/img/carritoo.png" alt="mano-patita"></a>
@@ -222,11 +139,7 @@ export function createCarruHome(list, container) {
 
 export function noEncontrado(container, formulario) {
   container.innerHTML = `<div class="style-mens">
-<<<<<<< HEAD
     <h5>No se encontro su producto "${formulario}".</h5>
-=======
-    <h5>Ups.. No se encontro ningun resultado ! "${formulario}".</h5>
->>>>>>> dcdaa6f2453c113c2c848cbd8cbb889b4af51ad7
     <img src="../assets/img/perritotriste.jpg" alt="perro" class="perritotriste">
     </div>`
 

@@ -697,11 +697,7 @@ form{
     border: none;
     border-radius: 6px;
     padding: 3px;
-<<<<<<< HEAD
     color: black;
-=======
-    color: #fff;
->>>>>>> dcdaa6f2453c113c2c848cbd8cbb889b4af51ad7
 }
 form textarea{
 	background-color: #ffffff!important;
