@@ -967,6 +967,22 @@ footer{
 	.home-text p{
 		font-size: 16px;
 	} 
+	.descripcion{
+        font-size: 12px;
+    }
+    .card-bod h5{
+        font-size: 14px;
+    }
+    .card-bod p{
+        font-size: 14px;
+    }
+    .descripcion-total img{
+        width: 80PX;
+    }
+    .descripcion button{
+        width: 100%;
+        font-size: 12PX;
+    }
 	
 	.submenu:hover #carrito{
 		display: block;
