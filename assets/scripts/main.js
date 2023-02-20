@@ -72,7 +72,7 @@ carrito.addEventListener("click", (e) => {
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Compra realizada con exito',
+                title: 'Gracias por su compra',
                 showConfirmButton: false,
                 timer: 1500
             })
